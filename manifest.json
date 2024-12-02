@@ -1,0 +1,25 @@
+{
+   "background": {
+      "scripts": [ "js/util.js", "js/util_inject.js", "js/background.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "js/util.js", "js/util_inject.js", "js/message_proxies.js", "js/webpage_application.js", "js/contentscript.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "This extension applies video effects on the camera in WebRTC applications",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAomY03VfeKYmpewMFlP1bytO9TxU5NEQHGHX62lIOrgSiPILvAR68oZKbkjs6u4zBDBDbVbWtoQKaS7a2xAIHPTUxJXiLaX2sRk5anVVtFgj/RpJvvymv3sq9Unlb0H8BnuKf4J/dPddevJi5jsXXAjIW14STlQsTyhTFi4cvn5v8E1H9vn0qpnwQKSGry+KApC1lTP+RAgOaxR1cBD9+h7QU3x5m4s2BkQTCGb7HFy7zBodUtgNxFBhh6rOza7+Td//m3stzDpZ5e8h/gcj6JVriD6sy2NVIHLzbbHt7lJQFOKlFCsKHlQG5GA0jyAA2owjPYoWNqa0r7eBBkk2DhQIDAQAB",
+   "manifest_version": 2,
+   "name": "WebRTC video effect",
+   "page_action": {
+      "default_icon": "res/icon_off.png",
+      "default_popup": "html/popup.html",
+      "default_title": "WebRTC Video effect"
+   },
+   "permissions": [ "tabs", "storage" ],
+   "short_name": "webfx",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1",
+   "web_accessible_resources": [ "lib/three.min.js" ]
+}
